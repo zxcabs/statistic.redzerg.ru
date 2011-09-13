@@ -1,0 +1,31 @@
+- if (data) {
+div#form-result
+	h2 Статистика игр:
+	- if (data.error) {
+		div.error
+			!= data.error
+	- } else {
+		div.stat
+			div.pl1
+				div.name
+					a(href='/player?pl=' + data.pl1) #{data.pl1}
+				div Победы: 
+					span.score 
+						!= data.scr1
+							|  -
+							!= data.per1
+			div.pl2
+				div.name
+					a(href='/player?pl=' + data.pl2) #{data.pl2}
+				div Победы: 
+					span.score
+						!= data.scr2
+							|  -
+							!= data.per2
+			div Всего игр: 
+				span.total
+					!= data.gameCount
+			div
+				!= partial('urls', {url: data.matchsUrl});
+	- }
+- }

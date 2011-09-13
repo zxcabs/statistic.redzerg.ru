@@ -1,0 +1,11 @@
+!!! 5
+html
+	head
+		link(rel='icon', type='image/x-icon', href='/images/favicon.ico')
+		link(rel='shortcut', type='image/x-icon', href='/images/favicon.ico')
+		
+		meta( content='test/html; charset=UTF-8', http-equiv='Content-Type')
+		title= title || pageTitle
+		link(rel='stylesheet', type='text/css', href='/stylesheets/error.css')
+	body
+		div#error_body!= body

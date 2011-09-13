@@ -1,0 +1,5 @@
+ul.urls
+	- for(var i in url) {
+		li 
+			a(href=url[i], rel='nofollow') #{url[i]}
+	- }

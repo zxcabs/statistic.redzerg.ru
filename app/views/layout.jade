@@ -1,0 +1,23 @@
+!!! 5
+html
+	head(lang='ru')
+		link(rel='icon', type='image/x-icon', href='/favicon.ico')
+		link(rel='shortcut', type='image/x-icon', href='/favicon.ico')
+		
+		meta(content='test/html; charset=UTF-8', http-equiv='Content-Type')
+		meta(name='description', content='Сайт redzerg.ru предоставляет статистику игроков SC2 собранную с различных турниров. В качестве результата работы вы можете выбрать либо общую статистику игрока, либо статистику противостояний между двумя игроками StarCraft 2.')
+		meta(name='keywords', content='Статистика игроков, SC2, StarCraft2, Статистика игр меду игроками, redzerg.ru')
+		title= title || pageTitle
+		link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+		
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js', type='text/javascript')
+		!= renderScript(src)
+	body
+		div#bg
+		div#body
+			div#top
+				span: a(href='/') Главная
+				span: a(href='/player') Игрок
+				span: a(href='/about') Где я?
+				span: a(href='/statistic') Статистика
+			div#middle!= body

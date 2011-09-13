@@ -1,0 +1,20 @@
+- if (pl) {
+div.player-info
+
+	h3 Статистика игрока: 
+		a(href='?pl=' + pl.name) #{pl.name}
+	div.pl_win Побед:
+		!= pl.scr
+			|   -
+			!= pl.winper
+	div.pl_lose Поражений:
+		!= pl.lose  
+			|  - 
+			!= pl.loseper
+	div.gameCount Всего игр:
+		!= pl.gameCount
+	div.enemyCount Всего противников:
+		!= pl.enemiesCount
+	div.matchCount Всего матчей:
+		!= pl.matchCount
+- }
